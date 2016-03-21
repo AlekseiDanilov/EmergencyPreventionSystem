@@ -32,4 +32,16 @@ public enum Risk {
     public int getMaximumNumberPerson() {
         return this.maximumNumberPerson;
     }
+
+    public static void printLevelsRisk() {
+        System.out.println("Levels risk:");
+        System.out.println("----------------------------------------------------------------------");
+        for (Risk levelRisk : Risk.values()) {
+            if (levelRisk == Risk.CRITICAL) {
+                System.out.println(levelRisk + ": > " + levelRisk.minimumNumberPerson);
+            } else {
+                System.out.println(levelRisk + ": " + levelRisk.getMaximumNumberPerson());
+            }
+        }
+    }
 }

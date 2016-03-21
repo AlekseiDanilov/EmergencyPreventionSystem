@@ -86,4 +86,21 @@ public class Sector {
         }
         this.cells = cells;
     }
+
+    public void printSector() {
+        System.out.println("----------------------------------------------------------------------");
+        System.out.print("\t");
+        for (int i = 0; i < cells[0].length; i++) {
+            System.out.print((i + 1) + "\t");
+        }
+        System.out.println();
+        for (int i = 0; i < cells.length; i++) {
+            System.out.print((i + 1) + "\t");
+            for (int j = 0; j < cells[0].length; j++) {
+                System.out.print(cells[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
 }
